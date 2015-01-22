@@ -1,6 +1,6 @@
 //based on http://jsfiddle.net/andycooper/PcjUR/1/ and Jim Vallandingham's Tutorial
 var width = $('#viz').width() - 100,
-    height = $('#viz').height() - 100,
+    height = $('#viz').height(),
     n = 6,
     m = 1,
     padding = 200,
@@ -14,7 +14,7 @@ var width = $('#viz').width() - 100,
     damper = .1,
     firstTicks = true,
     flyoutTimer;
-console.log(width);
+
 var brewerScale = ['rgb(141,211,199)', 'rgb(255,255,179)', 'rgb(190,186,218)',
     'rgb(251,128,114)', 'rgb(128,177,211)', 'rgb(253,180,98)',
     'rgb(179,222,105)', 'rgb(252,205,229)', 'rgb(217,217,217)'
@@ -25,22 +25,24 @@ brewerScale.forEach(function(color, i) {
 })
 $('body').mousemove(function(e) {
     var flyoutHeight = $('#flyoutTop').height();
-    console.log(flyoutHeight);
+  
     $('#flyout').css('left', e.clientX - 220).css('top', e.clientY -
         flyoutHeight - 60);
 });
-d3.json('./cleanedData.json', function(data) {
+d3.json('cambridge.json', function(data) {
     var i = 0;
     data.forEach(function(item) {
         item.id = i;
-        var thisCategory = mapCategories(item);
-        console.log(thisCategory);
-        $('#categoryBox' + thisCategory).append(
-            "<div class = 'agency" + item.id + "'>" + item.department +
+        //var thisCategory = mapCategories(item);
+        //console.log(thisCategory);
+        $('#categoryBox' + 0).append(
+            "<div class = 'agency" + item.id + "'>" + item.department_name +
             "</div>");
         //$('#sideBar').append("<div class = 'agency" + item.id + "'>" + item.department +"</div>");
         i++;
     });
+
+
     $('div[class^=agency]').mouseover(function() {
         clearTimeout(flyoutTimer);
         var thisClass = $(this).attr('class');
@@ -51,14 +53,16 @@ d3.json('./cleanedData.json', function(data) {
         //.transition().duration(250).style('fill','red');
         var thisAgency = $(this).html();
         nodes.forEach(function(d) {
-            if (d.department == thisAgency) {
-                d.radius = d.radius + 30;
-                $('#flyoutDepartment').html(d.department);
+            console.log(thisAgency)
+            console.log
+            if (d.category == thisAgency) {
+          
+                $('#flyoutDepartment').html(d.category);
                 $('#flyoutFinalBudget').html(
-                    "Budget: $" + d.finalBudget.toLocaleString()
+                    "Budget: $" + d.sum_fiscal_2015_requested.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 );
                 $('#flyout2012Actual').html(
-                    "Actual Spend: $" + d.fy2012Actual
+                    "Actual Spend: $" + d.sum_fiscal_2014_original.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                     .toLocaleString());
                 $('#flyout').fadeIn(10);
             }
@@ -81,22 +85,24 @@ d3.json('./cleanedData.json', function(data) {
         }, 100)
         force.start();
     });
+
+
     var max_amount = d3.max(data, function(d) {
-            return parseInt(d.finalBudget);
+            return parseInt(d.sum_fiscal_2015_requested);
         }),
         radius_scale = d3.scale.pow().exponent(0.5).domain([0,
             max_amount
         ]).range([3, 100]),
         nodes = [];
-    var clusters = new Array(9);
+    var clusters = new Array(1);
     data.forEach(function(d) {
         var node = {
             id: d.id,
-            category: d.category,
-            department: d.department,
-            finalBudget: d.finalBudget,
-            fy2012Actual: d.fy2012Actual,
-            radius: radius_scale(parseInt(d.finalBudget)),
+            category: d.department_name,
+            //department: d.department,
+            sum_fiscal_2015_requested: d.sum_fiscal_2015_requested,
+            sum_fiscal_2014_original: d.sum_fiscal_2014_original,
+            radius: radius_scale(parseInt(d.sum_fiscal_2015_requested)),
             //charge: radius_scale(parseInt(d.finalBudget)),
             x: Math.random() * 900,
             y: Math.random() * 900
@@ -131,13 +137,14 @@ d3.json('./cleanedData.json', function(data) {
         return d.radius;
     });
     circle.on('mouseover', function(d) {
+        console.log(d);
         clearTimeout(flyoutTimer);
         $('.agency' + d.id).toggleClass("highlight");
         d3.select(this).classed("highlight", true);
-        $('#flyoutDepartment').html(d.department);
-        $('#flyoutFinalBudget').html("Budget: $" + d.finalBudget
+        $('#flyoutDepartment').html(d.category);
+        $('#flyoutFinalBudget').html("2015 Requested: $" + d.sum_fiscal_2015_requested.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             .toLocaleString());
-        $('#flyout2012Actual').html("Actual Spend: $" + d.fy2012Actual
+        $('#flyout2012Actual').html("2014 Original: $" + d.sum_fiscal_2014_original.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             .toLocaleString());
         $('#flyout').fadeIn(10);
     }).on('mouseout', function(d) {

@@ -1,0 +1,192 @@
+
+[ {
+  "sum_fiscal_2015_requested" : "323535",
+  "sum_fiscal_2014_original" : "309700",
+  "department_name" : "Animal Commission"
+}
+, {
+  "sum_fiscal_2015_requested" : "1452495",
+  "sum_fiscal_2014_original" : "1474795",
+  "department_name" : "Cable Television"
+}
+, {
+  "sum_fiscal_2015_requested" : "6750000",
+  "sum_fiscal_2014_original" : "6500000",
+  "department_name" : "Cambridge Health Alliance"
+}
+, {
+  "sum_fiscal_2015_requested" : "21504975",
+  "sum_fiscal_2014_original" : "20126950",
+  "department_name" : "Cherry Sheet "
+}
+, {
+  "sum_fiscal_2015_requested" : "1240705",
+  "sum_fiscal_2014_original" : "1119765",
+  "department_name" : "City Clerk's Office "
+}
+, {
+  "sum_fiscal_2015_requested" : "1711115",
+  "sum_fiscal_2014_original" : "1683125",
+  "department_name" : "City Council"
+}
+, {
+  "sum_fiscal_2015_requested" : "6335440",
+  "sum_fiscal_2014_original" : "5676340",
+  "department_name" : "Community Development Department"
+}
+, {
+  "sum_fiscal_2015_requested" : "127770",
+  "sum_fiscal_2014_original" : "123470",
+  "department_name" : "Conservation Commission"
+}
+, {
+  "sum_fiscal_2015_requested" : "38892975",
+  "sum_fiscal_2014_original" : "38647025",
+  "department_name" : "Debt Service"
+}
+, {
+  "sum_fiscal_2015_requested" : "1072390",
+  "sum_fiscal_2014_original" : "1013565",
+  "department_name" : "Election Commission"
+}
+, {
+  "sum_fiscal_2015_requested" : "2767880",
+  "sum_fiscal_2014_original" : "2840910",
+  "department_name" : "Electrical Department"
+}
+, {
+  "sum_fiscal_2015_requested" : "4631960",
+  "sum_fiscal_2014_original" : "4434425",
+  "department_name" : "Emergency Communications"
+}
+, {
+  "sum_fiscal_2015_requested" : "32882665",
+  "sum_fiscal_2014_original" : "32787200",
+  "department_name" : "Employee Benefits "
+}
+, {
+  "sum_fiscal_2015_requested" : "2298685",
+  "sum_fiscal_2014_original" : "2008150",
+  "department_name" : "Executive Office "
+}
+, {
+  "sum_fiscal_2015_requested" : "14540220",
+  "sum_fiscal_2014_original" : "13292350",
+  "department_name" : "Finance Department "
+}
+, {
+  "sum_fiscal_2015_requested" : "44661535",
+  "sum_fiscal_2014_original" : "43350275",
+  "department_name" : "Fire Department "
+}
+, {
+  "sum_fiscal_2015_requested" : "704725",
+  "sum_fiscal_2014_original" : "732695",
+  "department_name" : "General Services"
+}
+, {
+  "sum_fiscal_2015_requested" : "687860",
+  "sum_fiscal_2014_original" : "632940",
+  "department_name" : "Historical Commission"
+}
+, {
+  "sum_fiscal_2015_requested" : "266890",
+  "sum_fiscal_2014_original" : "249380",
+  "department_name" : "Human Rights Commission"
+}
+, {
+  "sum_fiscal_2015_requested" : "24225290",
+  "sum_fiscal_2014_original" : "23155080",
+  "department_name" : "Human Services Department"
+}
+, {
+  "sum_fiscal_2015_requested" : "3270335",
+  "sum_fiscal_2014_original" : "3180045",
+  "department_name" : "Inspectional Services"
+}
+, {
+  "sum_fiscal_2015_requested" : "2176975",
+  "sum_fiscal_2014_original" : "2163240",
+  "department_name" : "Law Department"
+}
+, {
+  "sum_fiscal_2015_requested" : "20802385",
+  "sum_fiscal_2014_original" : "20015620",
+  "department_name" : "Library"
+}
+, {
+  "sum_fiscal_2015_requested" : "1063745",
+  "sum_fiscal_2014_original" : "1030970",
+  "department_name" : "License Commission"
+}
+, {
+  "sum_fiscal_2015_requested" : "22189730",
+  "sum_fiscal_2014_original" : "21346815",
+  "department_name" : "Massachusetts Water Resources Authority "
+}
+, {
+  "sum_fiscal_2015_requested" : "589680",
+  "sum_fiscal_2014_original" : "558785",
+  "department_name" : "Mayor's Office "
+}
+, {
+  "sum_fiscal_2015_requested" : "148445",
+  "sum_fiscal_2014_original" : "143940",
+  "department_name" : "Peace Commission"
+}
+, {
+  "sum_fiscal_2015_requested" : "49260625",
+  "sum_fiscal_2014_original" : "47186015",
+  "department_name" : "Police Department "
+}
+, {
+  "sum_fiscal_2015_requested" : "75235",
+  "sum_fiscal_2014_original" : "73440",
+  "department_name" : "Police Department Review & Advisory Services"
+}
+, {
+  "sum_fiscal_2015_requested" : "874335",
+  "sum_fiscal_2014_original" : "891945",
+  "department_name" : "Public Celebrations"
+}
+, {
+  "sum_fiscal_2015_requested" : "33634490",
+  "sum_fiscal_2014_original" : "32859690",
+  "department_name" : "Public Works Department"
+}
+, {
+  "sum_fiscal_2015_requested" : "37500",
+  "sum_fiscal_2014_original" : "37500",
+  "department_name" : "Reserve"
+}
+, {
+  "sum_fiscal_2015_requested" : "156669635",
+  "sum_fiscal_2014_original" : "150989445",
+  "department_name" : "School Department"
+}
+, {
+  "sum_fiscal_2015_requested" : "11088415",
+  "sum_fiscal_2014_original" : "10935015",
+  "department_name" : "Traffic, Parking & Transportation"
+}
+, {
+  "sum_fiscal_2015_requested" : "1092655",
+  "sum_fiscal_2014_original" : "1005375",
+  "department_name" : "Veterans' Services"
+}
+, {
+  "sum_fiscal_2015_requested" : "13964275",
+  "sum_fiscal_2014_original" : "14238700",
+  "department_name" : "Water Department"
+}
+, {
+  "sum_fiscal_2015_requested" : "142935",
+  "sum_fiscal_2014_original" : "138540",
+  "department_name" : "Weights & Measures"
+}
+, {
+  "sum_fiscal_2015_requested" : "241295",
+  "sum_fiscal_2014_original" : "233115",
+  "department_name" : "Women's Commission"
+}
+ ]
